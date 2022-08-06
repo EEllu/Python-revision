@@ -1,0 +1,175 @@
+nums = [25,26,27,28]
+print(nums)
+nums.extend([30,31,32,33])
+print(nums)
+print(min(nums))
+print(sum(nums))
+print(nums.sort())
+
+tuples = (23,24,2,4)
+print(tuples)
+print(tuples[1])
+
+set = {1,2,3,4,5,6,8}
+print(set)
+# print(set[1])
+# print(set.pop())
+
+print(id(nums))
+
+number = 2+5j 
+print(type(number))
+
+a = 5
+b = 6
+print(b>a)
+
+print(range(10))
+print(list(range(10)))
+print(list(range(2,10,2)))  #range(start,end,difference)
+
+d = {'navin':'samsung', 'rahul':'apple','kiran':'poco'}
+print(d)
+print(d.keys())
+print(d.values()) 
+print(d['rahul'])
+print(d.get('kiran'))
+
+x = 7
+y = 7
+print(x==y)
+print(x!=y)
+
+c = 5
+d = 9
+print(c<8 and d<10)
+print(c<8 or d<9)
+
+print(bin(25)) # bin function is used to convert decimal number into binary number
+print(oct(25))
+print(hex(25))
+
+#swipe 2 variables
+f = 5
+g = 6
+temp = f
+f = g
+g = temp
+print(temp)
+print(f)
+print(g)
+# so here we get f = 6 and g = 5.
+# other method to do the same thing is
+
+f = f + g
+g = f - g
+f = f - g
+
+print(f)
+print(g)
+
+# also we can use better method than the above 2 which is xor (^) method as it does not waste memory.
+f = f ^ g
+g = f ^ g
+f = f ^ g
+print(f)
+print(g)
+
+# the shortcut method to swipe 2 variables is
+
+f,g = g,f
+
+print(f)
+print(g)
+
+print(~12)  # this is complement of 12.
+print(~ 121)
+
+#bitwise operators
+print(12 & 13) # and operator
+print(12 | 13) # or operator
+print(12 | 116)
+print(12 ^ 13) # xor operator
+print(12 << 16) # left shift operator
+print(12 >> 17) # right shift operator
+
+# import math function.
+import math
+x = math.sqrt(25)
+print(x) 
+
+print(math.floor(2.1))
+print(math.ceil(2.1))
+print(math.pow(3,2)) # 3**2
+print(math.pi)
+print(math.e)
+
+import math as m
+print(m.floor(3.6))
+
+from math import sqrt,pow
+print(sqrt(16))
+print(pow(4,5))
+
+#result = eval(input("Enter an expression:"))
+#print(result)
+
+# if elif else statement.
+x = 8
+r = x % 2
+
+if r == 0:
+    print("even")
+    if x>5:
+        print("Great")
+    else:
+        print("Not so great")
+else:
+    print("odd")
+    
+u = 5
+if u == 1:
+    print("one")
+elif(u == 2):
+    print("two")
+else:
+    print("wrong input")
+
+#loops in python.
+#while loop.
+i = 1
+while i <= 5:
+    print("How are you i?, %d")
+    i += 1
+
+
+j = 1
+while j <= 5:
+    print("How are you", end='')
+    k = 1
+    while k <= 4:
+        print("Aarjav", end='')
+        k += 1
+    j += 1
+    print()
+    
+    
+# for loops
+
+x = ["navin", 65, 3.5]
+for i in x:
+    print(i)
+    
+    
+for i in range(11,21,2): #range(starting, ending,difference)
+    print(i) 
+    
+for i in range(11,1,-1): #range(starting, ending,difference)
+    print(i) 
+    
+
+
+# firstname = input("First Name:" )
+# lastname = input("Last Name:" )
+
+# print("Your full name is " + firstname + " " + lastname)
