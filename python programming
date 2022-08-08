@@ -249,6 +249,42 @@ for e in arr:
         print(k)
         break
     k += 1
+print(arr.index(val))
+
+#numpy
+from numpy import *
+arr = array([1,2,3,5,4],int)
+print(arr)
+
+arr = array([1,2,3,5,4,5,0])
+print(arr.dtype)
+print(arr)
+
+arr = linspace(0,15,20) #linspace(start, end, parts)
+print(arr)
+
+arr = linspace(0,15) #linspace(start, parts)
+print(arr)
+
+arr = arange(1,15,2) # arange(start,end,steps)
+print(arr)
+
+arr = logspace(0,15,2) # logspace(start, end, steps). here we print in the form of a log i.e 10^i.
+print(arr)
+#to print the output in normal form we use 
+print('%.2f'%arr[1])
+
+arr = zeros(5) # it is use to print an array of zeros.
+print(arr)
+
+arr = ones(5, int) # it is use to print an array of ones.
+print(arr)
+
+arr1 = array([1,2,3,4,5])
+arr2 = array([6,7,8,9,10])
+print(concatenate([arr1, arr2])) # to merge the two arrays.
+
+
 
 # firstname = input("First Name:" )
 # lastname = input("Last Name:" )
