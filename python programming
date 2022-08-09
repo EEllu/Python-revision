@@ -381,6 +381,80 @@ def person(name, **data): # **data means it can hold multiple arguments with hel
     print(data)
 person("navin", age = 28, city = "Mumbai", mob = 9870654)
 
+
+def person(name, **data):
+    print(name)
+    
+    for i,j in data.items(): # keyword argument
+        print(i,j)
+person("navin", age = 28, city = "Mumbai", mob = 9870654)
+
+
+a = 10 # global variable
+def something():
+    a = 15 # local variable
+    print("In Function",a)
+something()
+print("outside Function",a)
+
+
+a = 10 # global variable
+def something():
+    global a
+    a = 15 # local variable
+    print("In Function",a)
+something()
+print("outside Function",a)
+
+
+a = 10 # global variable
+def something():
+    a = 9# local variable
+    x = globals()['a']
+    print("In Function",a)
+    globals()['a'] = 15
+    
+something()
+print("outside Function",a)
+
+
+
+def count(lst):
+    even = 0
+    odd = 0
+    for i in lst:
+        if i % 2 == 0:
+            even += 1
+        else:
+            odd += 1
+    return even, odd
+lst = [20,25,14,19,16,24,28,47,26]
+even, odd = count(lst)
+print(even)
+print(odd)
+#or it can also be printed as
+print("Even : {} and odd : {}".format(even, odd))
+
+
+# fibonacci series.
+def fibonacci(n):
+    a = 0
+    b = 1
+    if n ==1:
+        print(a)
+    else:
+        print(a)
+        print(b)
+        for i in range(2, int(n)):
+            c = a + b
+            a = b
+            b = c
+            print(c)
+fibonacci(input("Enter the number of terms: "))
+
+
+
+
 # firstname = input("First Name:" )
 # lastname = input("Last Name:" )
 
