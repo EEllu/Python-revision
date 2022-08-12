@@ -549,6 +549,37 @@ def main():
     fun2()
 main()
 
+#class in python.
+class Computer:  # a class has atributes/variabls and behaviors/methods/functions.
+    def config(self):
+        print("i5, 16gb, 1TB")
+com1 = Computer()
+com2 = Computer()
+Computer.config(com1)
+Computer.config(com2)
+#or
+com1.config()
+com2.config()
+
+
+#__init__ method 
+
+class Computer: 
+    def __init__(self, cpu, ram): 
+        self.cpu = cpu
+        self.ram = ram
+    def config(self):
+        print("config is: ", self.cpu, self.ram)
+        
+com1 = Computer('i5',16gb)
+com2 = Computer('Ryzen 3', 8)
+
+com1.config()
+com2.config()
+
+
+
+
 
 
 
