@@ -510,6 +510,44 @@ print(doubles)
 #reduce function
 from functools import reduce
 
+nums = [3,2,6,8,4,6,2,9]
+evens = list(filter(lambda n : n%2 == 0,nums))
+doubles = list(map(lambda n : n*2,evens)) 
+print(doubles)
+sum = reduce(lambda a,b : a+b, doubles) #reduce(function, sequence)
+print(sum)
+
+#decorators 
+def div(a,b):
+    print(a/b)
+    
+def smart_dev(func):
+    def inner(a,b):
+        if a<b:
+            a,b = b,a
+        return func(a,b)
+    return inner
+div = smart_dev(div)
+div(2,4)
+
+#modules in python 
+from Calc import *
+c = add(4,5)
+print(c)
+
+
+#special variable __name__
+from Calc2 import *
+def fun1():
+    add()
+    print("from fun1")
+def fun2():
+    print("from fun2")
+    
+def main():
+    fun1()
+    fun2()
+main()
 
 
 
