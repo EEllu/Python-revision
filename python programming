@@ -639,6 +639,40 @@ Car.wheels = 8
 print(c1.com, c1.mil,c1.wheels)
 print(c2.com, c2.mil,c2.wheels)
 
+#Types of methods.
+#Accessor methods and mutator methods.
+class Students:
+    school = "Teclusko"
+    
+    def __init__(self,m1,m2,m3):
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+    def avg(self):
+        return (self.m1 + self.m2 + self.m3) / 3
+s1 = Students(34,47,32)
+s2 = Students(89,32,12)
+print(s1.avg())
+
+class Students:
+    school = "Teclusko"
+    
+    def __init__(self,m1,m2,m3):
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+    def avg(self):
+        return (self.m1 + self.m2 + self.m3) / 3
+    
+    def get_m1(self): #get method gets the value so they are called accessors
+        return self.m1
+    def set_m1(self, value): # set method sets the value so they are called mutators
+        self.m1 = value
+        
+s1 = Students(34,47,32)
+s2 = Students(89,32,12)
+print(s1.avg())
+
 
 
 # firstname = input("First Name:" )
