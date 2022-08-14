@@ -708,6 +708,56 @@ print(s1.avg())
 Students.info()
 
 
+# class under class
+class Student:
+    def __init__(self,name,roll):
+        self.name = name
+        self.roll = roll
+        
+    def show(self):
+        print(self.name, self.roll)
+    class Laptop:
+        def __init__(self):
+            self.brand = 'Asus'
+            self.cpu = 'i5'
+            self.ram = 8
+s1 = Student("Aarjav", 1)
+s2 = Student("Navin", 2)
+
+s1.show()
+lap1 = Student.Laptop()
+
+
+
+class Student:
+    def __init__(self,name,roll):
+        self.name = name
+        self.roll = roll
+        self.lap = self.Laptop()
+        
+    def show(self):
+        print(self.name, self.roll)
+        self.lap.show()
+    class Laptop:
+        def __init__(self):
+            self.brand = 'Asus'
+            self.cpu = 'i5'
+            self.ram = 8
+        def show(self):
+            print(self.brand, self.cpu, self.ram)
+s1 = Student("Aarjav", 1)
+s2 = Student("Navin", 2)
+
+s1.show()
+lap1 = Student.Laptop()
+
+
+
+
+
+
+
+
 # firstname = input("First Name:" )
 # lastname = input("Last Name:" )
 
