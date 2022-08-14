@@ -668,11 +668,44 @@ class Students:
         return self.m1
     def set_m1(self, value): # set method sets the value so they are called mutators
         self.m1 = value
+    @classmethod
+    def info(cls): #cls is used to define the class variable
+        return cls.school
+        
         
 s1 = Students(34,47,32)
 s2 = Students(89,32,12)
 print(s1.avg())
+print(Students.info())
 
+
+#static method
+
+class Students:
+    school = "Teclusko"
+    
+    def __init__(self,m1,m2,m3):
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+    def avg(self):
+        return (self.m1 + self.m2 + self.m3) / 3
+    
+    def get_m1(self): #get method gets the value so they are called accessors
+        return self.m1
+    def set_m1(self, value): # set method sets the value so they are called mutators
+        self.m1 = value
+    @classmethod
+    def getSchool(cls): #cls is used to define the class variable
+        return cls.school
+    @staticmethod
+    def info():
+        print("This is student class")
+        
+s1 = Students(34,47,32)
+s2 = Students(89,32,12)
+print(s1.avg())
+Students.info()
 
 
 # firstname = input("First Name:" )
