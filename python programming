@@ -752,6 +752,60 @@ s1.show()
 lap1 = Student.Laptop()
 
 
+#class inherit a class
+class A:
+    def feature1(self):
+        print("Feature 1 is working")
+    def feature2(self):
+        print("Feature 2 is working")
+a1 = A()
+a1.feature1()
+a1.feature2()
+
+class A:
+    def feature1(self):
+        print("Feature 1 is working")
+    def feature2(self):
+        print("Feature 2 is working")
+class B:
+    def feature3(self):
+        print("Feature 3 is working")
+    def feature4(self):
+        print("Feature 4 is working")    
+    
+a1 = A()
+a1.feature1()
+a1.feature2()
+b1 = B()
+b1.feature3()
+b1.feature4()
+
+
+
+
+class A:
+    def feature1(self):
+        print("Feature 1 is working")
+    def feature2(self):
+        print("Feature 2 is working")
+class B(A): # inheritance of A in B class
+    def feature3(self):
+        print("Feature 3 is working")
+    def feature4(self):
+        print("Feature 4 is working")   
+class C(B): # multi Level inheritance as c class inherits A and B class as well
+    def feature5(self):
+        print("Feature 5 is working") 
+    
+a1 = A()
+a1.feature1()
+a1.feature2()
+b1 = B()
+c1 = C()
+
+        
+
+
 
 
 
