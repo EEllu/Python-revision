@@ -804,12 +804,69 @@ b1 = B()
 c1 = C()
 
         
+# Constructor in inheritance
 
+class A:
+    def __init__(self):
+        print("This is A init")
+    def feature1(self):
+        print("Feature 1 is working")
+    def feature2(self):
+        print("Feature 2 is working")
+class B(A):
+    def __init__(self):
+        super().__init__() # super is used to access all the features of parent class.
+        print("This is B init")
+    def feature3(self):
+        print("Feature 3 is working")
+    def feature4(self):
+        print("Feature 4 is working") 
+a1 = B()
 
+class A:
+    def __init__(self):
+        print("This is A init")
+    def feature1(self):
+        print("Feature 1 is working")
+    def feature2(self):
+        print("Feature 2 is working")
+class B: 
+    def __init__(self):
+        super().__init__()
+        print("This is B init")
+    def feature3(self):
+        print("Feature 3 is working")
+    def feature4(self):
+        print("Feature 4 is working") 
+class C(A, B): 
+    def __init__(self):
+        print("This is C init")
+    
+a1 = C()
 
+#Method Resolution Order (MRO)
+class A:
+    def __init__(self):
+        print("This is A init")
+    def feature1(self):
+        print("Feature 1-A is working")
+    def feature2(self):
+        print("Feature 2 is working")
+class B: 
+    def __init__(self):
+        super().__init__()
+        print("This is B init")
+    def feature1(self):
+        print("Feature 1-B is working")
+    def feature4(self):
+        print("Feature 4 is working") 
+class C(A, B): 
+    def __init__(self):
+        super().__init__()
+        print("This is C init")
 
-
-
+a1 = C()
+a1.feature1()
 
 
 # firstname = input("First Name:" )
