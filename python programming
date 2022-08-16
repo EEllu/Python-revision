@@ -864,9 +864,68 @@ class C(A, B):
     def __init__(self):
         super().__init__()
         print("This is C init")
+    def feat(self):
+        super().feature2()
 
 a1 = C()
 a1.feature1()
+a1.feat()
+
+#Polymorphism
+#1 Duck Tying
+#2 Operator Overloading
+#3 Method Overloading
+#4 Method Overriding
+
+#Duck Typing
+
+class vscode:
+    def execute(self):
+        print("Compiling")
+        print("Running")
+class Laptop:
+    def code(self, ide):
+        ide.execute()
+ide = vscode()
+lap1 = Laptop()
+lap1.code(ide)
+
+
+class vscode:
+    def execute(self):
+        print("Compiling")
+        print("Running")
+        
+class MyEditor:
+    def execute(self):
+        print("Spell Check")
+        print("Convention Check")
+        print("compiling")
+        print("Running")
+        
+class Laptop:
+    def code(self, ide):
+        ide.execute()
+ide = vscode()
+ide = MyEditor()
+lap1 = Laptop()
+lap1.code(ide)
+
+#operator overloading
+a = 5
+b = 6
+print(a + b)
+print(int.__add__(a,b))
+
+a = '5'
+b = '6'
+print(a + b)
+print(str.__add__(a,b))
+
+
+
+
+
 
 
 # firstname = input("First Name:" )
