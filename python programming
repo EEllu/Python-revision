@@ -1048,7 +1048,7 @@ class B(A):
 a1 = B()
 a1.show()        
 
-#iterator
+#iterator = It is used to get one value at a time from a list of values.
 nums = [7,8,9,5]
 for i in nums:
     print(i)
@@ -1077,6 +1077,65 @@ class TopTen:
 values = TopTen()
 for i in values:
     print(i)
+
+
+#Generator 
+
+def TopTen():
+    n = 1
+    while n <= 10:
+        sq = n * n
+        yield sq #yield is used in generators
+        n += 1
+values = TopTen()
+for i in values:
+    print(i)
+
+# Exception Handling is used to handle bugs or exceptions.
+
+a = 5
+b = 0
+try:
+    print(a/b)
+except Exception as e: # except will execute only if you have an error
+    print("Hey you cannot divide a number by zero!", e)
+    
+print("Bye")
+
+
+a = 5
+b = 0
+try:
+    print("resource open")
+    print(a/b)
+except Exception as e: # except will execute only if you have an error
+    print("Hey you cannot divide a number by zero!")
+    
+finally:
+    print("resource closed")
+
+
+
+a = 5
+b = 0
+
+try:
+    print("resource open")
+    print(a/b)
+    k = int(input("Enter a number: "))
+    print(k)
+    
+except ZeroDivisionError as e:
+    print("Hey you cannot divide a number by zero!",e)
+    
+except ValueError as e:
+    print("Invalid input")
+
+except Exception as e:
+    print("something went wrong...")
+    
+finally:
+    print("resource closed")
 
 
 
