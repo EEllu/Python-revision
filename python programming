@@ -1136,7 +1136,72 @@ except Exception as e:
     
 finally:
     print("resource closed")
+    
+    
+#MultiThreading
+from threading import *
+class Hello(Thread):    # thread is a method imported from threading.
+    def run (self):
+        for i in range(5):
+            print("Hello!")
+            
+class Hi(Thread):
+    def run (self):
+        for i in range(5):
+            print("Hi!")
+t1 = Hello()
+t2 = Hi()
 
+t1.run()
+t2.run()
+
+
+from time import *
+from threading import *
+class Hello(Thread):    
+    def run (self):
+        for i in range(5):
+            print("Hello!")
+            sleep(1) # sleep is a method imported from time.
+            
+class Hi(Thread):
+    def run (self):
+        for i in range(5):
+            print("Hi!")
+            sleep(1)
+t1 = Hello()
+t2 = Hi()
+
+t1.start()
+sleep(0.2)
+t2.start()
+
+
+
+from time import *
+from threading import *
+class Hello(Thread):    
+    def run (self):
+        for i in range(5):
+            print("Hello!")
+            sleep(1) # sleep is a method imported from time.
+            
+class Hi(Thread):
+    def run (self):
+        for i in range(5):
+            print("Hi!")
+            sleep(1)
+t1 = Hello()
+t2 = Hi()
+
+t1.start()
+sleep(0.2)
+t2.start()
+
+t1.join() # join is used to make main thread wait for other threads to join and then main thread will execute.
+t2.join()
+
+print("Bye")
 
 
 
