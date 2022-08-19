@@ -532,9 +532,9 @@ div = smart_dev(div)
 div(2,4)
 
 #modules in python 
-from Calc import *
-c = add(4,5)
-print(c)
+# from Calc import *
+# c = add(4,5)
+# print(c)
 
 
 #special variable __name__
@@ -1202,6 +1202,49 @@ t1.join() # join is used to make main thread wait for other threads to join and 
 t2.join()
 
 print("Bye")
+
+
+#File Handling
+f = open('Calc2.py', 'r') # to open a file, and r means in read mode.
+print(f.read())
+
+f1 = open('Calc.py', 'w') # w is write mode
+f1.write('Something')
+f1.write("People")
+
+
+f2 = open('Calc.py','a') # a is append mode
+f2.write('Mobile')
+
+#to copy data from one file to another
+f = open('Calc2.py', 'r') 
+f1 = open('Calc.py', 'w')
+for data in f:
+    f1.write(data)
+
+#to read an image file, we use 'rb' which means read binary
+# to write the image file, we use wb which means write binary 
+
+#Linear search in python
+pos = -1
+def search(list,n):
+    i = 0
+    while i < len(list):
+        if list[i] == n:
+            globals()['pos'] = i
+            return True
+        i += 1
+    return False
+
+list = [5,8,4,6,9,2]
+n = 5
+if search(list,n):
+    print("Found at ", pos+1)
+else:
+    print("Not Found")
+
+
+
 
 
 

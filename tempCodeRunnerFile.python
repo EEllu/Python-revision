@@ -1,0 +1,7 @@
+f1 = open('Calc.py', 'w')
+f1.write('Something')
+f1.write("People")
+
+
+f2 = open('Calc.py','a')
+f2.write('Mobile')
