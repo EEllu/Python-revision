@@ -1242,11 +1242,78 @@ if search(list,n):
     print("Found at ", pos+1)
 else:
     print("Not Found")
+    
+#python homework of dictionary and functions.
+#dictionary
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+
+# Duplicate values will overwrite existing values:
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict)
+
+print(len(thisdict))
+
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(type(thisdict))
+
+#math function
+x = min(5, 10, 25)
+y = max(5, 10, 25)
+
+print(x)
+print(y)
+
+x = abs(-7.25)
+
+print(x)
+
+x = pow(4, 3)
+
+print(x)
+
+import math
+x = math.sqrt(64)
+
+print(x)
+
+x = math.ceil(1.4)
+y = math.floor(1.4)
+
+print(x) # returns 2
+print(y) # returns 1
 
 
+x = math.pi
 
-
-
+print(x)
 
 
 # firstname = input("First Name:" )
